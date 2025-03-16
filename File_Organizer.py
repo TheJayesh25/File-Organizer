@@ -2,7 +2,7 @@ import os
 import shutil
 
 # Define the folder to be organized
-folder_to_organize = r'C:\\Users\\jps25\\OneDrive\\Desktop\\Documents\\Python refresher\\to_organize'  # Change this to your folder path
+folder_to_organize = r'folder_path_needed_to_organize'  # Change this to your folder path
 
 # Define categories and their corresponding file extensions
 file_types = {
