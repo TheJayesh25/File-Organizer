@@ -2,7 +2,7 @@ import os
 import shutil
 
 # Define the folder to be organized
-folder_to_organize = r'folder_path_needed_to_organize'  # Change this to your folder path
+folder_to_organize = r'folder_path_needed_to_organize' 
 
 # Define categories and their corresponding file extensions
 file_types = {
@@ -22,7 +22,7 @@ def get_file_type(extension):
     return 'Others'
 
 def organize_files():
-    # Get all files in the folder
+    # Get all file names in the folder
     for file_name in os.listdir(folder_to_organize):
         file_path = os.path.join(folder_to_organize, file_name)
 
@@ -31,14 +31,13 @@ def organize_files():
             category = get_file_type(file_extension)
             category_folder = os.path.join(folder_to_organize, category)
             
-            # Create category folder if it doesn't exist
+            # Create category folders if they don't exist
             os.makedirs(category_folder, exist_ok=True)
 
-            # Move file to respective category folder
+            # Move files to their respective category's folders
             shutil.move(file_path, os.path.join(category_folder, file_name))
             print(f'Moved {file_name} to {category}/')
 
 if __name__ == '__main__':
     organize_files()
     print('Files have been organized!')
-  
